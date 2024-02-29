@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predict Parkinson Disease</title>
+  </head>
+
+  <body>
+    <h1>Predict Parkinson</h1>
+    <br />
+    <form action="{% url "parkinsonresults" %}">
+input_data = (197.07600,206.89600,192.05500,0.00289,0.00001,0.00166,0.00168,0.00498,0.01098,0.09700,0.00563,0.00680,0.00802,0.01689,0.00339,26.77500,0.422229,0.741367,-7.348300,0.177551,1.743867,0.085569)
+        
+      <br/>
+      <br/>
+      {% csrf_token %}
+      MDVP:Fo(Hz):<input type="text" step="0.01" required name="MDVP:Fo(Hz)" /> 
+      <br /><br />
+      MDVP:Fhi(Hz): <input type="text"  step="0.01" required name="MDVP:Fhi(Hz)" /> 
+      <br /><br />
+      MDVP:Flo(Hz): <input type="text" step="0.01" required name= "MDVP:Flo(Hz)"/> 
+      <br /><br />
+      MDVP:Jitter(%): <input type="text" step="0.01" required name="MDVP:Jitter(%)" />
+      <br /><br />
+      MDVP:Jitter(Abs): <input type="text" step="0.01" required name="MDVP:Jitter(Abs)" /> <br />
+      <br /><br />
+      MDVP:RAP: <input type="text" step="0.01" required name="MDVP:RAP" /> 
+      <br /><br />
+      MDVP:PPQ:<input type="text" step="0.01" required name="MDVP:PPQ" /> 
+      <br /><br />
+      Jitter:DDP: <input type="text" step="0.01" required name="Jitter:DDP" /> 
+      <br /><br />
+      MDVP:Shimmer: <input type="text" step="0.01" required name="MDVP:Shimmer" /> 
+      <br /><br />
+      Shimmer:APQ3: <input type="text" step="0.01" required name="Shimmer:APQ3" /><br /> 
+      <br />
+      Shimmer:APQ5: <input type="text" step="0.01" required name="Shimmer:APQ5" /> 
+      <br /><br />
+      MDVP:APQ: <input type="text" step="0.01" required name="MDVP:APQ" /> 
+      <br /><br />
+      Shimmer:DDA: <input type="text" step="0.01" required name="Shimmer:DDA" /> 
+      <br /> <br />
+      NHR: <input type="text" step="0.01" required name="NHR" /> 
+      <br /> <br />
+      HNR: <input type="text" step="0.01" required name="HNR" /> 
+      <br /> <br />
+      status: <input type="text" step="0.01" required name="status" /> 
+      <br /> <br />
+      RPDE: <input type="text" step="0.01" required name="RPDE" /> 
+      <br /> <br />
+      DFA: <input type="text" step="0.01" required name="DFA" /> 
+      <br /> <br />
+      spread1: <input type="text" step="0.01" required name="spread1" /> 
+      <br /> <br />
+      spread2: <input type="text" step="0.01" required name="spread2" /> 
+      <br /> <br />
+      D2: <input type="text" step="0.01" required name="D2" /> 
+      <br /> <br />
+      PPE: <input type="text" step="0.01" required name="PPE" /> 
+      <br /> <br />
+      <input type="submit" name="submit" value="submit" />
+    </form>
+  </body>
+</html>

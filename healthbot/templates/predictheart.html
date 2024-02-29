@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predict Heart Disease</title>
+  </head>
+
+  <body>
+    <h1>Predict Heart</h1>
+    <br />
+    <form action="{% url "heartresults" %}">
+      input_data = (62,0,0,140,268,0,0,160,0,3.6,0,2,2) </br>
+      age sex cp trestbps chol fbs restecg thalach exang oldpeak slope ca thal target
+      <br/>
+      <br/>
+      {% csrf_token %}
+      age:<input type="text" step="0.01" required name="age" /> <br />
+      <br />
+      sex: <input type="text"  step="0.01" required name="sex" /> <br />
+      <br />
+      cp: <input type="text" step="0.01" required name= "cp"/> <br />
+      <br />
+      trestbps: <input type="text" step="0.01" required name="trestbps" />
+      <br />
+      <br />
+      chol: <input type="text" step="0.01" required name="chol" /> <br />
+      <br />
+      fbs: <input type="text" step="0.01" required name="fbs" /> <br />
+      <br />
+      restecg:
+      <input type="text" step="0.01" required name="restecg" /> <br />
+      <br />
+      thalach: <input type="text" step="0.01" required name="thalach" /> <br />
+      <br />
+      exang: <input type="text" step="0.01" required name="exang" /> <br />
+      <br />
+      oldpeak: <input type="text" step="0.01" required name="oldpeak" /> <br />
+      <br />
+      slope: <input type="text" step="0.01" required name="slope" /> <br />
+      <br />
+      ca: <input type="text" step="0.01" required name="ca" /> <br />
+      <br />
+      thal: <input type="text" step="0.01" required name="thal" /> <br />
+      <br />
+      <input type="submit" name="submit" value="submit" />
+    </form>
+  </body>
+</html>
